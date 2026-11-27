@@ -163,3 +163,7 @@ Use a local filesystem and a trusted config, store, and scheduler working direct
 - unsnooze and claude-powernap resume the same session when usage limits lift. [unsnooze](https://github.com/saaranshM/unsnooze) · [claude-powernap](https://pypi.org/project/claude-powernap/)
 
 wakesub handles condition subscriptions for times, files, and previous wakes, with expiry notices and a per-cycle budget. The delivery adapter is pluggable and can use these tools where their delivery behavior fits.
+
+## Feedback
+
+Tried it? Share what worked and what got in the way in [Discussions](https://github.com/T7H7N/wakesub/discussions). Use [Issues](https://github.com/T7H7N/wakesub/issues) for bugs.

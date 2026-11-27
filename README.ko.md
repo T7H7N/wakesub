@@ -167,3 +167,7 @@ summary = run_once(Store(Path("scratch-state")), recording)
 - unsnooze와 claude-powernap은 사용량 한도가 풀리면 같은 세션을 이어 간다. [unsnooze](https://github.com/saaranshM/unsnooze) · [claude-powernap](https://pypi.org/project/claude-powernap/)
 
 wakesub은 시각·파일·앞 구독을 조건으로 받아 만료도 통지하고 회차 예산을 적용한다. 위 도구들이 제공하는 배달 방식이 맞으면 어댑터로 연결할 수 있다.
+
+## 의견 남기기
+
+써 보셨다면 잘 된 점과 걸린 점을 [Discussions](https://github.com/T7H7N/wakesub/discussions)에 남겨 주세요. 버그는 [Issues](https://github.com/T7H7N/wakesub/issues)로 알려 주세요.

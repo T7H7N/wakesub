@@ -1,0 +1,11 @@
+{
+  "adapter": {
+    "type": "command",
+    "argv": ["claude", "-p", "--resume", "{target}"],
+    "timeout": 60
+  },
+  "budget": 2,
+  "target_interval": 60,
+  "max_attempts": 3,
+  "interval": 15
+}

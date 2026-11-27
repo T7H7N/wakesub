@@ -1,0 +1,7 @@
+{
+  "adapter": {"type": "file", "inbox": "inbox"},
+  "budget": 5,
+  "target_interval": 30,
+  "max_attempts": 3,
+  "interval": 10
+}

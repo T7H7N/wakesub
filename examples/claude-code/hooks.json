@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-B", "${CLAUDE_PROJECT_DIR}/examples/claude-code/on_session_start.py"]
+          }
+        ]
+      }
+    ],
+    "FileChanged": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-B", "${CLAUDE_PROJECT_DIR}/examples/claude-code/on_file_changed.py"],
+            "asyncRewake": true
+          }
+        ]
+      }
+    ]
+  }
+}

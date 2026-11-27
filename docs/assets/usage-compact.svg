@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="497" viewBox="0 0 390 497" role="img" aria-labelledby="t d">
+  <title id="t">Watch a report arrive</title>
+  <desc id="d">A subscription watches ready.txt for content. The first poll reports attempted=0 fired=0 expired=0 failed=0. After the shell writes Report body, the second poll reports attempted=1 fired=1 expired=0 failed=0. The inbox contains the target demo and the message The report is available at ready.txt.</desc>
+  <rect x="1" y="1" width="388" height="495" rx="15" fill="#f6f5f1" stroke="#bcc9c3"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#172529">
+    <text x="19" y="36" font-size="24" font-weight="700">Watch a report arrive</text>
+    <text x="19" y="62" font-size="15" fill="#465a56">An open subscription watches ready.txt for data.</text>
+    <rect x="12" y="80" width="366" height="251" rx="9" fill="#172529"/>
+    <path d="M13 113h364" stroke="#465a56"/>
+    <g fill="#a6b9af"><circle cx="29" cy="96" r="3"/><circle cx="40" cy="96" r="3"/><circle cx="51" cy="96" r="3"/></g>
+    <text x="364" y="101" text-anchor="end" font-size="14" fill="#d4dfd8">Shell</text>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="16" xml:space="preserve">
+      <g fill="#f6f5f1">
+        <text x="24" y="141"><tspan fill="#ffb09a">$ </tspan>python -B -m wakesub run-once</text>
+        <text x="24" y="224"><tspan fill="#ffb09a">$ </tspan>printf 'Report body' &gt; ready.txt</text>
+        <text x="24" y="259"><tspan fill="#ffb09a">$ </tspan>python -B -m wakesub run-once</text>
+      </g>
+      <g fill="#b9cac2">
+        <text x="24" y="168">attempted=0 fired=0 <tspan x="24" dy="20">expired=0 failed=0</tspan></text>
+        <text x="24" y="286">attempted=1 <tspan fill="#ffb09a" font-weight="700">fired=1</tspan> <tspan x="24" dy="20">expired=0 failed=0</tspan></text>
+      </g>
+    </g>
+    <rect x="12.5" y="345.5" width="365" height="136" rx="8" stroke="#bdc9c3" fill="#fffefa"/>
+    <path d="M26 362h16l6 6v16H26z M42 362v6h6" fill="none" stroke="#a9402d" stroke-width="1.65" stroke-linejoin="round"/>
+    <text x="59" y="379" font-size="16" font-weight="700">Inbox notice</text>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="16" xml:space="preserve">
+      <text x="26" y="406">Target: demo</text>
+      <text x="26" y="438">The report is available <tspan x="26" dy="21">at ready.txt.</tspan></text>
+    </g>
+  </g>
+</svg>

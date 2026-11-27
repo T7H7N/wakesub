@@ -1,1 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="870" height="124" viewBox="0 0 870 124" role="img" aria-labelledby="title desc"><title id="title">wakesub workflow</title><desc id="desc">A subscription is polled outside the session. A matching condition sends a notice through the configured adapter.</desc><g font-family="Segoe UI, Helvetica, Arial, sans-serif"><rect x="0" y="0" width="870" height="124" rx="14" fill="#101B2C" stroke="none"/><rect x="18" y="21" width="257" height="82" rx="12" fill="#1A293C" stroke="#3C4D60"/><g transform="translate(42 46)"><path d="M-8 -7h15 M-8 0h15 M-8 7h10" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><text x="63" y="53" font-size="21" fill="#F3F6F8" font-weight="650" >Subscription</text><text x="33" y="86" font-size="16" fill="#CED9E3" font-weight="400" >Time, file, or previous wake</text><path d="M275 62 H299" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M293 57 l6 5 -6 5" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><rect x="304" y="21" width="257" height="82" rx="12" fill="#1A293C" stroke="#3C4D60"/><g transform="translate(328 46)"><path d="M-11 0q11 -15 22 0q-11 15 -22 0z M0 -3a3 3 0 1 1 -.1 0" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><text x="349" y="53" font-size="21" fill="#F3F6F8" font-weight="650" >External poller</text><text x="319" y="86" font-size="16" fill="#CED9E3" font-weight="400" >Observe the condition</text><path d="M561 62 H585" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M579 57 l6 5 -6 5" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><rect x="590" y="21" width="257" height="82" rx="12" fill="#1A293C" stroke="#3C4D60"/><g transform="translate(614 46)"><path d="M-9 6h18l-3 -4v-4a6 6 0 0 0 -12 0v4z M-3 10h6" fill="none" stroke="#FFA9B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><text x="635" y="53" font-size="21" fill="#F3F6F8" font-weight="650" >Delivery adapter</text><text x="605" y="86" font-size="16" fill="#CED9E3" font-weight="400" >Local command or inbox</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="416" viewBox="0 0 1000 416" role="img" aria-labelledby="t d">
+  <title id="t">When each subscription fires</title>
+  <desc id="d">At 09:00 three subscriptions are registered. At the 09:01 poll an empty report file exists. At 09:02 the file contains data. At 09:03 a scheduled timer is due. The file adapter writes one notice for each match.</desc>
+  <defs>
+    <pattern id="paper" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#ccd5ce"/></pattern>
+    <g id="registered"><circle r="7" fill="#f6f5f1" stroke="#225a56" stroke-width="2.8"/></g>
+    <g id="sent"><circle r="12" fill="#f9dfd4"/><circle r="7.8" fill="#b74432"/><path d="m-3.8 .1 2.5 2.4 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  </defs>
+  <rect x="1" y="1" width="998" height="414" rx="18" fill="#f6f5f1" stroke="#bcc9c3"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#172529">
+    <text x="31" y="48" font-size="30" font-weight="700">When each subscription fires</text>
+    <text x="32" y="77" font-size="17" fill="#465a56">A separate poller checks once a minute in this example.</text>
+    <path d="M318 105h650v237H318z" fill="url(#paper)" opacity=".5"/>
+    <g stroke="#b4c5bd" fill="none" stroke-width="1">
+      <path d="M331 130H943"/>
+      <path d="M331 130v211m174-211v211m174-211v211m174-211v211" stroke-dasharray="3 6"/>
+    </g>
+    <g fill="#465a56" font-family="Consolas, 'Courier New', monospace" font-size="15" text-anchor="middle">
+      <text x="331" y="118">09:00</text><text x="505" y="118">09:01</text><text x="679" y="118">09:02</text><text x="853" y="118">09:03</text>
+    </g>
+    <g fill="#506861"><path d="M330 127h2v7h-2zm174 0h2v7h-2zm174 0h2v7h-2zm174 0h2v7h-2z"/></g>
+    <g stroke="#d7ded8"><path d="M32 213h921M32 277h921"/></g>
+    <g font-size="18.5" font-weight="700">
+      <text x="32" y="174">File appears</text><text x="32" y="238">File gains content</text><text x="32" y="302">Scheduled time</text>
+    </g>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#465a56">
+      <text x="32" y="197">--file report.md</text><text x="32" y="261">--file-nonempty report.md</text><text x="32" y="325">--at 09:03</text>
+    </g>
+    <g stroke="#225a56" stroke-linecap="round" stroke-width="3.4"><path d="M331 180H505M331 244H679M331 308H853"/></g>
+    <g fill="#f6f5f1" stroke="#7c9589" stroke-width="1.8"><circle cx="505" cy="244" r="3"/><circle cx="505" cy="308" r="3"/><circle cx="679" cy="308" r="3"/></g>
+    <use href="#registered" x="331" y="180"/><use href="#registered" x="331" y="244"/><use href="#registered" x="331" y="308"/>
+    <use href="#sent" x="505" y="180"/><use href="#sent" x="679" y="244"/><use href="#sent" x="853" y="308"/>
+    <g font-size="16" fill="#783323" font-weight="700">
+      <text x="525" y="185">Created empty</text><text x="699" y="249">First bytes</text><text x="873" y="313">Time due</text>
+    </g>
+    <path d="M32 347h936" stroke="#bcc9c3"/>
+    <use href="#registered" x="43" y="380"/><text x="59" y="385" font-size="16">Registered</text>
+    <path d="M208 380h30" stroke="#225a56" stroke-width="3.4" stroke-linecap="round"/>
+    <text x="247" y="385" font-size="16">Waiting for a match</text>
+    <use href="#sent" x="480" y="380"/><text x="498" y="385" font-size="16">Notice written to inbox</text>
+  </g>
+</svg>

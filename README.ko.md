@@ -1,14 +1,23 @@
-# ![wakesub](docs/assets/banner.svg)
+<h1><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner.svg">
+  <img src="docs/assets/banner-light.svg" alt="wakesub">
+</picture></h1>
 
 세션이 쉬기 전에 조건을 등록하고, 외부에서 조건을 확인해 통지를 전달합니다.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-915461?style=flat)](LICENSE) ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-915461?style=flat) ![Dependencies: standard library](https://img.shields.io/badge/dependencies-stdlib-915461?style=flat) [![Tests on main](https://img.shields.io/github/actions/workflow/status/T7H7N/wakesub/tests.yml?branch=main&label=tests&style=flat)](https://github.com/T7H7N/wakesub/actions/workflows/tests.yml)
 
+**[바로 시작](#빠른-시작)**　·　[English](README.md) · 한국어
+
 ### 무엇을 해결하나요?
 
-- 시각, 파일 또는 앞선 구독의 발화를 조건으로 등록합니다.
-- 세션 밖에서 조건을 확인하고 관측 결과를 기록합니다.
-- 설정된 로컬 명령이나 수신 폴더를 통해 통지를 전달합니다.
+<table>
+<tr>
+  <td width="33%" valign="top"><img src="docs/assets/feature-1.svg" width="30" alt=""><br><strong>발화 조건</strong><br>시각, 파일 또는 앞선 구독의 발화를 조건으로 등록합니다.</td>
+  <td width="33%" valign="top"><img src="docs/assets/feature-2.svg" width="30" alt=""><br><strong>조건 확인</strong><br>세션 밖에서 조건을 확인하고 관측 결과를 기록합니다.</td>
+  <td width="33%" valign="top"><img src="docs/assets/feature-3.svg" width="30" alt=""><br><strong>통지 전달</strong><br>설정된 로컬 명령이나 수신 폴더를 통해 통지를 전달합니다.</td>
+</tr>
+</table>
 
 <picture>
   <source media="(max-width: 600px)" srcset="docs/assets/workflow-compact.svg">
@@ -17,7 +26,12 @@
 
 세션이 조건을 미리 등록하면 외부 감시기가 이를 확인하고, 어댑터가 로컬 명령 또는 수신 폴더로 통지를 전달합니다.
 
-**[바로 시작](#빠른-시작)**　·　[English](README.md) · 한국어
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/usage-compact.svg">
+  <img src="docs/assets/usage.svg" alt="로컬 깨움 구독의 명령과 실행 결과.">
+</picture>
+
+빈 파일에는 통지가 없고, 파일에 내용이 생긴 뒤 다시 확인하면 수신함에 통지 한 건이 생깁니다.
 
 쉬고 있는 에이전트 세션은 시각이 되거나 다른 프로세스가 파일을 썼을 때 스스로 깨어날 수 없다. wakesub은 세션 밖에서 조건을 주기적으로 확인하고 로컬 명령이나 수신 폴더에 짧은 메시지를 보낸다. Python 3.9 이상에서 표준 라이브러리만 사용한다.
 

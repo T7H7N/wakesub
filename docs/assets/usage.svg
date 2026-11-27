@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="420" viewBox="0 0 590 420" role="img" aria-labelledby="t d">
+  <title id="t">Watch a report arrive</title>
+  <desc id="d">A nonempty-file subscription for ready.txt is already open. The first poll makes no attempt. After the shell writes Report body, the next poll fires once. The file adapter writes a Markdown notice for target demo.</desc>
+  <rect x="1" y="1" width="588" height="418" rx="14" fill="#f6f5f1" stroke="#bcc9c3"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#172529">
+    <text x="21" y="35" font-size="23" font-weight="700">Watch a report arrive</text>
+    <text x="21" y="59" font-size="15" fill="#465a56">An open subscription is waiting for ready.txt to contain data.</text>
+    <rect x="17" y="78" width="556" height="205" rx="10" fill="#172529"/>
+    <path d="M18 111h554" stroke="#465a56"/>
+    <g fill="#a6b9af"><circle cx="34" cy="95" r="3"/><circle cx="45" cy="95" r="3"/><circle cx="56" cy="95" r="3"/></g>
+    <text x="554" y="100" text-anchor="end" fill="#d4dfd8" font-size="13">Shell</text>
+    <g xml:space="preserve" font-family="Consolas, 'Courier New', monospace" font-size="15.5">
+      <g fill="#f6f5f1">
+        <text x="33" y="140"><tspan fill="#ffb09a">$ </tspan>python -B -m wakesub run-once</text>
+        <text x="33" y="195"><tspan fill="#ffb09a">$ </tspan>printf 'Report body' &gt; ready.txt</text>
+        <text x="33" y="229"><tspan fill="#ffb09a">$ </tspan>python -B -m wakesub run-once</text>
+      </g>
+      <text x="33" y="163" fill="#b9cac2">attempted=0 fired=0 expired=0 failed=0</text>
+      <text x="33" y="252" fill="#b9cac2">attempted=1 <tspan fill="#ffb09a" font-weight="700">fired=1</tspan> expired=0 failed=0</text>
+    </g>
+    <rect x="17.5" y="296.5" width="555" height="105" rx="7" stroke="#bdc9c3" fill="#fffefa"/>
+    <path d="M33 313h16l6 6v16H33z M49 313v6h6" fill="none" stroke="#a9402d" stroke-width="1.65" stroke-linejoin="round"/>
+    <text x="65" y="329" font-size="15" font-weight="700">Inbox notice</text>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="15.5">
+      <text x="33" y="356">Target: demo</text>
+      <text x="33" y="385">The report is available at ready.txt.</text>
+    </g>
+  </g>
+</svg>

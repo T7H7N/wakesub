@@ -1,4 +1,23 @@
-# wakesub
+# ![wakesub](docs/assets/banner.svg)
+
+세션이 쉬기 전에 조건을 등록하고, 외부에서 조건을 확인해 통지를 전달합니다.
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-915461?style=flat)](LICENSE) ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-915461?style=flat) ![Dependencies: standard library](https://img.shields.io/badge/dependencies-stdlib-915461?style=flat) [![Tests on main](https://img.shields.io/github/actions/workflow/status/T7H7N/wakesub/tests.yml?branch=main&label=tests&style=flat)](https://github.com/T7H7N/wakesub/actions/workflows/tests.yml)
+
+### 무엇을 해결하나요?
+
+- 시각, 파일 또는 앞선 구독의 발화를 조건으로 등록합니다.
+- 세션 밖에서 조건을 확인하고 관측 결과를 기록합니다.
+- 설정된 로컬 명령이나 수신 폴더를 통해 통지를 전달합니다.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/workflow-compact.svg">
+  <img src="docs/assets/workflow.svg" alt="세션이 조건을 미리 등록하면 외부 감시기가 이를 확인하고, 어댑터가 로컬 명령 또는 수신 폴더로 통지를 전달합니다.">
+</picture>
+
+세션이 조건을 미리 등록하면 외부 감시기가 이를 확인하고, 어댑터가 로컬 명령 또는 수신 폴더로 통지를 전달합니다.
+
+**[바로 시작](#빠른-시작)**　·　[English](README.md) · 한국어
 
 쉬고 있는 에이전트 세션은 시각이 되거나 다른 프로세스가 파일을 썼을 때 스스로 깨어날 수 없다. wakesub은 세션 밖에서 조건을 주기적으로 확인하고 로컬 명령이나 수신 폴더에 짧은 메시지를 보낸다. Python 3.9 이상에서 표준 라이브러리만 사용한다.
 

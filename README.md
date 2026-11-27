@@ -1,4 +1,21 @@
-# wakesub
+# ![wakesub](docs/assets/banner.svg)
+
+Register a condition before a session goes idle and deliver a notice when it is met.
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-915461?style=flat)](LICENSE) ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-915461?style=flat) ![Dependencies: standard library](https://img.shields.io/badge/dependencies-stdlib-915461?style=flat) [![Tests on main](https://img.shields.io/github/actions/workflow/status/T7H7N/wakesub/tests.yml?branch=main&label=tests&style=flat)](https://github.com/T7H7N/wakesub/actions/workflows/tests.yml)
+
+### What it solves
+
+- Watch a time, a file, or a previous subscription.
+- Poll outside the session and record the observed event.
+- Deliver through a configured command or inbox folder.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/workflow-compact.svg">
+  <img src="docs/assets/workflow.svg" alt="A subscription is polled outside the session. A matching condition sends a notice through the configured adapter.">
+</picture>
+
+**[Get started](#quick-start)**　·　English · [한국어](README.ko.md)
 
 An idle agent session cannot wake itself when a deadline arrives or another process writes a file. wakesub polls conditions outside the session and delivers a short message through a local command or an inbox folder. It requires Python 3.9 or later and uses only the standard library.
 

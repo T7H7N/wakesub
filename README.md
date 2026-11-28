@@ -31,6 +31,13 @@ Register a condition before a session goes idle and deliver a notice when it is 
 
 An idle agent session cannot wake itself when a deadline arrives or another process writes a file. wakesub polls conditions outside the session and delivers a short message through a local command or an inbox folder. It requires Python 3.9 or later and uses only the standard library.
 
+## Compatibility
+
+- **Built with.** Derived from a tool written and used in Claude Code (the desktop app's Code tab and the CLI). The test suite runs in CI on Ubuntu and Windows with Python 3.9 through 3.13.
+- **Independent of the agent tool.** The `wakesub` package (CLI, store, engine and the `command`, `file` and `noop` adapters) is standard-library Python. It polls times and files and delivers through a local command or an inbox folder, without depending on any agent tool.
+- **Specific to Claude Code.** `examples/claude-code/` (the `SessionStart` and `FileChanged` hook scripts and `hooks.json`) and the `claude -p --resume` command in `examples/command.json`. That example's README marks Windows desktop sessions as unverified.
+- **Not included.** This repository contains no hooks or adapters for Codex or other agent tools. To reach another tool, point the `command` adapter at its CLI or have it watch the `file` adapter's inbox.
+
 ## Three ways to subscribe to a wake
 
 The session runs one of these commands before going idle. A separate wakesub poller delivers the notice through the configured adapter.
